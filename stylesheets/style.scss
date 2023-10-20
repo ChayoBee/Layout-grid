@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'nav nav nav nav'
+    'sidebar body body body'
+    'footer footer footer footer'
+    ;
+}
+
+header {
+    background-color: tomato;
+    grid-area: nav;
+}
+
+aside {
+    height: 100vh;
+    background-color: blueviolet;
+    grid-area: sidebar;
+}
+
+section {
+    background-color: brown;
+    grid-area: body;
+}
+
+footer {
+    background-color: hotpink;
+    grid-area: footer;
+}
