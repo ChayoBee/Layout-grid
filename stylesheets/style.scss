@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@mixin bg ($h, $bg, $g){
+    height: $h;
+    background-color: $bg;
+    grid-area: $g;
+}
+
 .container {
     display: grid;
     grid-template-areas: 
@@ -14,22 +20,17 @@
 }
 
 header {
-    background-color: tomato;
-    grid-area: nav;
+    @include bg(60px, tomato, nav);
 }
 
 aside {
-    height: 100vh;
-    background-color: blueviolet;
-    grid-area: sidebar;
+    @include bg(100vh, blueviolet, sidebar);
 }
 
 section {
-    background-color: brown;
-    grid-area: body;
+    @include bg(100vh, brown, body);
 }
 
 footer {
-    background-color: hotpink;
-    grid-area: footer;
+    @include bg(50px, hotpink, footer);
 }
