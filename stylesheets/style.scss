@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+  @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
 @mixin bg ($h, $bg, $g){
     height: $h;
     background-color: $bg;
     grid-area: $g;
+}
+
+@mixin font ($f) {
+    font-family: 'Playpen Sans', sans-serif;
+    font-size: $f;
 }
 
 .container {
@@ -21,16 +28,40 @@
 
 header {
     @include bg(60px, tomato, nav);
+    @include font(25px);
+    .logo {
+        
+    }
 }
 
 aside {
-    @include bg(100vh, blueviolet, sidebar);
+    @include bg(100%, blueviolet, sidebar);
+    @include font(15px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
-    @include bg(100vh, brown, body);
+    @include bg(100%, brown, body);
+    @include font(15px);
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    .card {
+        @include bg(150px, lightgreen, card);
+        width: 30%;
+    }
 }
 
 footer {
     @include bg(50px, hotpink, footer);
+    @include font(13px);
+    display: flex;
+    justify-content: center;
+    padding: 12px;
 }
+
+/* Cambiar los colores de fondo, crear el diseño de las cartas, cambiar tamaño de imágenes en psd, diseñar el navbar
+*/
