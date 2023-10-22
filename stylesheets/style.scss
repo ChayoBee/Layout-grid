@@ -36,25 +36,51 @@
     grid-template-areas: 
     'nav nav nav nav'
     'sidebar body body body'
-    'footer footer footer footer'
+    'sidebar footer footer footer'
     ;
 }
 
 header {
-    @include bg(60px, #54e3ad, nav);
-    @include flex(flex, center, center);
+    @include bg(80px, #54e3ad, nav);
+    .navbar {
+        width: 100%;
+        display: flex;
+        .logo {
+            @include flex(flex, flex-start, none);
+            height: 70px;
+            padding-top: 8px;
+            padding-left: 10px;
+        }
+        .title {
+            @include font(18px);
+            @include flex(flex, none, center);
+            padding-left: 170px;
+            color: #1a545f;
+        }
+    }
 }
 
 aside {
     @include bg(100%, #40b29f, sidebar);
-    @include font(15px);
     width: 280px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    li {
-        cursor: pointer;
-        padding: 5px;
+    .subt {
+        @include flex(flex, center, center);
+        @include font(20px);
+        padding-top: 10px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #2b8091;
+    }
+    .list {
+        @include flex(flex, center, none);
+        @include font(17px);
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: 5px;
+        }
     }
 }
 
@@ -64,24 +90,68 @@ section {
     padding: 15px;
     gap: 10px;
     flex-wrap: wrap;
+    :hover {
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+        transform: translateY(-3%);
+    }
     .card {
         width: 250px;
         height: 320px;
         overflow: hidden;
         background: #f5faff;
         border: 1px solid lightgray;
-        :hover {
-            box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-            transform: translateY(-3%);
-        }
         .image {
             .img1 {
-            @include img (url(../assets/img/Adventure.jpg));
+                @include img (url(../assets/img/Adventure.jpg));
             }
             .img2 {
                 @include img(url(../assets/img/Past.jpg));
             }
-            
+            .img3 {
+                @include img(url(../assets/img/Awaking.jpeg));
+            }
+            .img4 {
+                @include img(url(../assets/img/Ocarina.jpg));
+            }
+            .img5 {
+                @include img(url(../assets/img/Majoras.png));
+            }
+            .img6 {
+                @include img(url(../assets/img/Ages.jpg));
+            }
+            .img7 {
+                @include img(url(../assets/img/Seasons.jpg));
+            }
+            .img8 {
+                @include img(url(../assets/img/WindWaker.jpg));
+            }
+            .img9 {
+                @include img(url(../assets/img/Four.jpg));
+            }
+            .img10 {
+                @include img(url(../assets/img/Minish.jpg));
+            }
+            .img11 {
+                @include img(url(../assets/img/Twilight.jpg));
+            }
+            .img12 {
+                @include img(url(../assets/img/Phantom.jpg));
+            }
+            .img13 {
+                @include img(url(../assets/img/Spirit.jpg));
+            }
+            .img14 {
+                @include img(url(../assets/img/Skyward.jpg));
+            }
+            .img15 {
+                @include img(url(../assets/img/Between.jpg));
+            }
+            .img16 {
+                @include img(url(../assets/img/Breath.jpg));
+            }
+            .img17 {
+                @include img(url(../assets/img/Tears.jpeg));
+            }
         }
         .Ctitle {
             @include font(14px);
@@ -96,7 +166,7 @@ section {
             @include flex(flex, center, center);
             margin-top: 10px;
             .boton {
-                @include font(14px);
+                @include font(20px);
                 height: 50px;
                 width: 200px;
                 cursor: pointer;
@@ -114,7 +184,7 @@ section {
 
 
 footer {
-    @include bg(50px, hotpink, footer);
+    @include bg(50px, #f5faff, footer);
     @include font(13px);
     display: flex;
     justify-content: center;

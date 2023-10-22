@@ -8,30 +8,64 @@
 
 .container {
   display: grid;
-  grid-template-areas: "nav nav nav nav" "sidebar body body body" "footer footer footer footer";
+  grid-template-areas: "nav nav nav nav" "sidebar body body body" "sidebar footer footer footer";
 }
 
 header {
-  height: 60px;
+  height: 80px;
   background-color: #54e3ad;
   grid-area: nav;
+}
+header .navbar {
+  width: 100%;
   display: flex;
-  justify-content: center;
+}
+header .navbar .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: none;
+  height: 70px;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+header .navbar .title {
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: none;
   align-items: center;
+  padding-left: 170px;
+  color: #1a545f;
 }
 
 aside {
   height: 100%;
   background-color: #40b29f;
   grid-area: sidebar;
-  font-family: "Playpen Sans", sans-serif;
-  font-size: 15px;
   width: 280px;
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
-aside li {
+aside .subt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #2b8091;
+}
+aside .list {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 17px;
+}
+aside .list li {
+  list-style: none;
   cursor: pointer;
   padding: 5px;
 }
@@ -47,16 +81,16 @@ section {
   gap: 10px;
   flex-wrap: wrap;
 }
+section :hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3%);
+}
 section .card {
   width: 250px;
   height: 320px;
   overflow: hidden;
   background: #f5faff;
   border: 1px solid lightgray;
-}
-section .card :hover {
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3%);
 }
 section .card .image .img1 {
   width: 100%;
@@ -69,6 +103,111 @@ section .card .image .img2 {
   width: 100%;
   height: 150px;
   background-image: url(../assets/img/Past.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img3 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Awaking.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img4 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Ocarina.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img5 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Majoras.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img6 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Ages.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img7 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Seasons.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img8 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/WindWaker.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img9 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Four.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img10 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Minish.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img11 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Twilight.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img12 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Phantom.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img13 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Spirit.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img14 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Skyward.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img15 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Between.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img16 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Breath.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img17 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Tears.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -91,7 +230,7 @@ section .card .Cfooter {
 }
 section .card .Cfooter .boton {
   font-family: "Playpen Sans", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   height: 50px;
   width: 200px;
   cursor: pointer;
@@ -106,7 +245,7 @@ section .card .Cfooter .boton :hover {
 
 footer {
   height: 50px;
-  background-color: hotpink;
+  background-color: #f5faff;
   grid-area: footer;
   font-family: "Playpen Sans", sans-serif;
   font-size: 13px;
