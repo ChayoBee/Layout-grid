@@ -13,13 +13,17 @@
 
 header {
   height: 60px;
-  background-color: rgb(218, 221, 223);
+  background-color: #54e3ad;
   grid-area: nav;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .logo {
-  height: 5px;
-  width: 15px;
+  width: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 header .title {
   font-family: "Playpen Sans", sans-serif;
@@ -29,10 +33,11 @@ header .title {
 
 aside {
   height: 100%;
-  background-color: blueviolet;
+  background-color: #40b29f;
   grid-area: sidebar;
   font-family: "Playpen Sans", sans-serif;
   font-size: 15px;
+  width: 280px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -40,7 +45,7 @@ aside {
 
 section {
   height: 100%;
-  background-color: brown;
+  background-color: #f5faff;
   grid-area: body;
   display: flex;
   justify-content: space-around;
@@ -50,11 +55,52 @@ section {
   flex-wrap: wrap;
 }
 section .card {
-  width: 33%;
+  width: 250px;
   height: 300px;
   overflow: hidden;
-  background: rgb(218, 221, 223);
+  background: #f5faff;
+  border: 1px solid lightgray;
+}
+section .card :hover {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3%);
+}
+section .card .image {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Adventure.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .Ctitle {
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+section .card .Cinfo {
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+section .card .Cfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+section .card .Cfooter .boton {
+  font-family: "Playpen Sans", sans-serif;
+  font-size: 14px;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  color: #2b8091;
+  border: 2px solid #2b8091;
+  border-radius: 4px;
+}
+section .card .Cfooter .boton :hover {
+  background: #40b29f;
+  color: #f5faff;
 }
 
 footer {
@@ -68,5 +114,5 @@ footer {
   padding: 12px;
 }
 
-/* Cambiar los colores de fondo, crear el diseño de las cartas, cambiar tamaño de imágenes en psd, diseñar el navbar
+/* arreglar el hover de las cartas, diseñar el navbar
 *//*# sourceMappingURL=style.css.map */
