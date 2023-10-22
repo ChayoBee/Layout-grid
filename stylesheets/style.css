@@ -19,17 +19,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-header .logo {
-  width: 100px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-header .title {
-  font-family: "Playpen Sans", sans-serif;
-  font-size: 15px;
-  align-content: center;
-}
 
 aside {
   height: 100%;
@@ -41,6 +30,10 @@ aside {
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+aside li {
+  cursor: pointer;
+  padding: 5px;
 }
 
 section {
@@ -56,7 +49,7 @@ section {
 }
 section .card {
   width: 250px;
-  height: 300px;
+  height: 320px;
   overflow: hidden;
   background: #f5faff;
   border: 1px solid lightgray;
@@ -65,10 +58,17 @@ section .card :hover {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-3%);
 }
-section .card .image {
+section .card .image .img1 {
   width: 100%;
   height: 150px;
   background-image: url(../assets/img/Adventure.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section .card .image .img2 {
+  width: 100%;
+  height: 150px;
+  background-image: url(../assets/img/Past.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -81,6 +81,7 @@ section .card .Cinfo {
   font-family: "Playpen Sans", sans-serif;
   font-size: 18px;
   text-align: center;
+  padding: 7px;
 }
 section .card .Cfooter {
   display: flex;
@@ -91,8 +92,8 @@ section .card .Cfooter {
 section .card .Cfooter .boton {
   font-family: "Playpen Sans", sans-serif;
   font-size: 14px;
-  height: 40px;
-  width: 100px;
+  height: 50px;
+  width: 200px;
   cursor: pointer;
   color: #2b8091;
   border: 2px solid #2b8091;
